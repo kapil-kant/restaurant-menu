@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Bella Cucina | Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background: #faf8f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        nav {
+            background: #2d2d2d;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .category-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #1a1a2e;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .item-info p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .item-price {
+            font-weight: 700;
+            color: #d4af37;
+            font-size: 1.1rem;
+            white-space: nowrap;
+            margin-left: 1rem;
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        .tag.vegetarian { background: #e8f5e9; color: #2e7d32; }
+        .tag.vegan { background: #f1f8e9; color: #558b2f; }
+        .tag.gluten-free { background: #fff3e0; color: #ef6c00; }
+        .tag.spicy { background: #ffebee; color: #c62828; }
+
+        footer {
+            background: #1a1a2e;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            nav ul { gap: 1rem; }
+            .menu-item { flex-direction: column; }
+            .item-price { margin-left: 0; margin-top: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🍝 La Bella Cucina</h1>
+        <p>Authentic Italian Cuisine • Est. 1985</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#appetizers">Appetizers</a></li>
+            <li><a href="#mains">Main Courses</a></li>
+            <li><a href="#pasta">Pasta</a></li>
+            <li><a href="#pizza">Pizza</a></li>
+            <li><a href="#desserts">Desserts</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="appetizers">
+            <h2 class="category-title">Appetizers</h2>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Bruschetta Classica</h3>
+                    <p>Toasted bread topped with fresh tomatoes, basil, and garlic</p>
+                    <div class="tags"><span class="tag vegetarian">V</span><span class="tag vegan">VG</span></div>
+                </div>
+                <span class="item-price">$12</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Caprese Salad</h3>
+                    <p>Fresh mozzarella, tomatoes, basil, balsamic glaze</p>
+                    <div class="tags"><span class="tag vegetarian">V</span><span class="tag gluten-free">GF</span></div>
+                </div>
+                <span class="item-price">$14</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Calamari Fritti</h3>
+                    <p>Crispy fried squid with marinara sauce</p>
+                </div>
+                <span class="item-price">$16</span>
+            </div>
+        </section>
+
+        <section id="mains">
+            <h2 class="category-title">Main Courses</h2>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Chicken Parmesan</h3>
+                    <p>Breaded chicken breast with marinara and melted mozzarella</p>
+                </div>
+                <span class="item-price">$24</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Grilled Salmon</h3>
+                    <p>Atlantic salmon with lemon butter sauce and vegetables</p>
+                    <div class="tags"><span class="tag gluten-free">GF</span></div>
+                </div>
+                <span class="item-price">$28</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Osso Buco</h3>
+                    <p>Braised veal shanks with gremolata and risotto</p>
+                </div>
+                <span class="item-price">$32</span>
+            </div>
+        </section>
+
+        <section id="pasta">
+            <h2 class="category-title">Pasta</h2>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Spaghetti Carbonara</h3>
+                    <p>Classic Roman pasta with eggs, pancetta, and pecorino</p>
+                </div>
+                <span class="item-price">$18</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Fettuccine Alfredo</h3>
+                    <p>Rich cream sauce with parmesan and fresh fettuccine</p>
+                    <div class="tags"><span class="tag vegetarian">V</span></div>
+                </div>
+                <span class="item-price">$17</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Penne Arrabbiata</h3>
+                    <p>Penne in spicy tomato sauce with garlic and chili</p>
+                    <div class="tags"><span class="tag vegetarian">V</span><span class="tag vegan">VG</span><span class="tag spicy">🌶️</span></div>
+                </div>
+                <span class="item-price">$16</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Lasagna Bolognese</h3>
+                    <p>Layers of pasta, meat sauce, béchamel, and mozzarella</p>
+                </div>
+                <span class="item-price">$19</span>
+            </div>
+        </section>
+
+        <section id="pizza">
+            <h2 class="category-title">Pizza</h2>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Margherita</h3>
+                    <p>Fresh mozzarella, tomatoes, basil, olive oil</p>
+                    <div class="tags"><span class="tag vegetarian">V</span></div>
+                </div>
+                <span class="item-price">$15</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Diavola</h3>
+                    <p>Spicy salami, mozzarella, tomatoes</p>
+                    <div class="tags"><span class="tag spicy">🌶️</span></div>
+                </div>
+                <span class="item-price">$17</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Quattro Formaggi</h3>
+                    <p>Four cheese blend: mozzarella, gorgonzola, parmesan, fontina</p>
+                    <div class="tags"><span class="tag vegetarian">V</span></div>
+                </div>
+                <span class="item-price">$18</span>
+            </div>
+        </section>
+
+        <section id="desserts">
+            <h2 class="category-title">Desserts</h2>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Tiramisu</h3>
+                    <p>Classic Italian dessert with espresso-soaked ladyfingers</p>
+                    <div class="tags"><span class="tag vegetarian">V</span></div>
+                </div>
+                <span class="item-price">$10</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Panna Cotta</h3>
+                    <p>Creamy vanilla custard with berry coulis</p>
+                    <div class="tags"><span class="tag vegetarian">V</span><span class="tag gluten-free">GF</span></div>
+                </div>
+                <span class="item-price">$9</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Cannoli</h3>
+                    <p>Crispy pastry shells filled with sweet ricotta</p>
+                    <div class="tags"><span class="tag vegetarian">V</span></div>
+                </div>
+                <span class="item-price">$8</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>📍 123 Italian Avenue, New York, NY 10001</p>
+        <p>📞 (555) 123-4567 • Open Daily 11am - 10pm</p>
+    </footer>
+</body>
+</html>
